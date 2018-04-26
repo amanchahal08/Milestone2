@@ -1,0 +1,70 @@
+<!-- The following are the few refferece websites from where the help was taken to buit the Milestone2_Navigations
+1) https://www.youtube.com/channel/UC7pVho4O31FyfQsZdXWejEw
+2) https://www.w3schools.com/howto/howto_js_topnav.asp
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Milestone2_Navigations</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600" rel="stylesheet">
+</head>
+<body>
+
+      <nav>
+            <div>
+                  <i class="fa fa-bars"></i>
+            </div>
+
+            <ul>
+
+                  <li><a href="#">Locations<i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                          <a href="#">Darwin</a>
+                          <a href="#">Palmerston</a>
+                          <a href="#">Katherine</a>
+                        </ul>
+                  </li>
+                  <li><a href="#">About Us <i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                          <a href="#">History</a>
+                          <a href="#">Team</a>
+                        </ul>
+                  </li>
+                  <li><a href="#">Media<i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                          <a href="#">Blog</a>
+                          <a href="#">Photo Gallery</a>
+                          <a href="#">Reports</a>
+                        </ul>
+                  </li>
+            </ul>
+      </nav>
+
+      <script type="text/javascript">
+
+      $("nav div").click(function() {
+            $("ul").slideToggle();
+            $("ul ul").css("display", "none");
+      });
+
+      $("ul li").click(function() {
+            $("ul ul").slideUp();
+            $(this).find('ul').slideToggle();
+      });
+
+      $(window).resize(function() {
+            if($(window).width() > 768) {
+                  $("ul").removeAttr('style');
+            }
+      });
+
+      </script>
+
+</body>
+</html>
